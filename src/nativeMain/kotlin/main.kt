@@ -11,4 +11,8 @@ fun main() {
 	day3.star5.star5()
 	println()
 	day3.star6.star6()
+	println()
+	day4.star7.star7()
+	println()
+	day4.star8.star8()
 }

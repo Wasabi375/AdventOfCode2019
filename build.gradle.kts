@@ -30,6 +30,12 @@ kotlin {
 			executable("star6") {
 				entryPoint = "day3.star6.star6"
 			}
+			executable("star7") {
+				entryPoint = "day4.star7.star7"
+			}
+			executable("star8") {
+				entryPoint = "day4.star8.star8"
+			}
 		}
 	}
 }
