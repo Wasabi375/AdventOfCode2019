@@ -35,12 +35,18 @@ class Computer(initialState: List<Int>, val allowedCodes: Set<Int>? = null){
 		}
 	}
 
+	/**
+	 * @param modes value at offset 1 is at index 1!!
+	 */
 	data class OpCode(val opCode: Int, val modes: List<ParameterMode>) {
 		companion object{
 			fun from(i: Int): OpCode {
 				val opCode = i % 100
 				val modesValue = i / 100
-				val modes = "${modesValue}0".reversed().padEnd(8, '0')
+				// the added 1 represents the mode of the instruction which is always 1
+				// also we want the modes to be indexed at 1 so they match the offset from
+				// the instructionPointer
+				val modes = "${modesValue}1".reversed().padEnd(8, '0')
 						.map { it.toString().toInt() }
 						.map { ParameterMode.from(it) }
 
