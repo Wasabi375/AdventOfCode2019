@@ -9,6 +9,9 @@ repositories {
 kotlin {
 	macosX64("native") {
 		binaries {
+			executable("tests") {
+				entryPoint = "tests.main"
+			}
 			executable("all"){
 				entryPoint = "main"
 			}
@@ -35,6 +38,12 @@ kotlin {
 			}
 			executable("star8") {
 				entryPoint = "day4.star8.star8"
+			}
+			executable("star9") {
+				entryPoint = "day5.star9"
+			}
+			executable("star10") {
+				entryPoint = "day5.star10"
 			}
 		}
 	}

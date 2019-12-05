@@ -1,5 +1,9 @@
 
 fun main() {
+	println("Tests:")
+	tests.main()
+	println()
+	println()
 	day1.star1.main()
 	println()
 	day1.star2.main()
@@ -15,4 +19,9 @@ fun main() {
 	day4.star7.star7()
 	println()
 	day4.star8.star8()
+	println()
+	day5.star9()
+	println()
+	day5.star10()
+	println()
 }

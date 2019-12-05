@@ -1,8 +1,9 @@
 package day2.star4
 
 import day2.star3.*
+import intcomputer.*
 
-val initState: List<Int> = Program(input).getState()
+val initState: List<Int> = Computer(input).getState()
 
 const val targetOutput = 19690720
 
@@ -25,7 +26,7 @@ fun star4() {
 }
 
 fun check(noun: Int, verb: Int): Boolean {
-	val prog = Program(initState)
+	val prog = Computer(initState)
 	prog[1] = noun
 	prog[2] = verb
 	prog.run()
