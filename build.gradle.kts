@@ -6,7 +6,7 @@ repositories {
 	mavenCentral()
 }
 
-defaultTasks("build", "runAllDebugExecutableNative")
+defaultTasks("runAllDebugExecutableNative")
 
 kotlin {
 	macosX64("native") {
