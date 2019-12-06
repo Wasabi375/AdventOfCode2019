@@ -44,8 +44,11 @@ kotlin {
 			executable("star9") {
 				entryPoint = "day5.star9"
 			}
-			executable("star10") {
-				entryPoint = "day5.star10"
+			executable("star11") {
+				entryPoint = "day6.star11"
+			}
+			executable("star12") {
+				entryPoint = "day6.star12"
 			}
 		}
 	}

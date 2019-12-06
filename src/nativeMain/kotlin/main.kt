@@ -24,4 +24,6 @@ fun main() {
 	println()
 	day5.star10()
 	println()
+	day6.star11()
+	println()
 }
