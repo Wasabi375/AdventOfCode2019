@@ -2,8 +2,6 @@ package day6
 
 import pathfinder.*
 
-var maxCost: Float = -1f
-
 private class SpaceObject(
 		val name: String,
 		var orbits: SpaceObject? = null,
@@ -30,7 +28,7 @@ private class SpaceObject(
 
 	override fun costTo(neighbour: SpaceObject): Float = 1f
 
-	override fun estimateCostTo(node: SpaceObject): Float = maxCost
+	override fun estimateCostTo(node: SpaceObject): Float = 0f
 }
 
 fun <A> Pair<A, A>.toSequence() = sequence {
@@ -73,8 +71,6 @@ fun star12() {
 	println("day 6 star 12")
 
 	val orbits = calcOrbits(input)
-
-	maxCost = orbits.values.sumBy { it.countOrbits() }.toFloat()
 
 	val start = orbits.getValue("YOU").orbits!!
 	val end = orbits.getValue("SAN").orbits!!
